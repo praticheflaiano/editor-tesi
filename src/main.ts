@@ -37,6 +37,8 @@ function open(message: OpenMessage) {
     }),
     documentMode: tracking.checked ? "suggesting" : "editing",
     user: { name: message.autore },
+    // Nessun dato esce dal browser: SuperDoc di suo manda un evento a ogni apertura (ingest.superdoc.dev).
+    telemetry: { enabled: false },
     onReady: () => {
       saveButton.disabled = false
       say(`${message.nome}: ${tracking.checked ? "le modifiche diventano revisioni" : "modifica diretta"}.`)
