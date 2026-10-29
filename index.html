@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Editor tesi</title>
+  </head>
+  <body>
+    <header class="barra">
+      <p id="stato" role="status">Aspetto il documento dal portale…</p>
+      <div class="azioni">
+        <label class="modo">
+          <input id="revisioni" type="checkbox" checked />
+          Segna le modifiche come revisioni
+        </label>
+        <button id="salva" type="button" disabled>Salva revisione</button>
+        <button id="chiudi" type="button" class="secondario">Chiudi</button>
+      </div>
+    </header>
+    <div id="toolbar"></div>
+    <main id="editor"></main>
+    <footer class="piede">
+      Editor libero sotto licenza AGPL-3.0, basato su SuperDoc.
+      <a href="https://github.com/praticheflaiano/editor-tesi" target="_blank" rel="noopener">Codice sorgente</a>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
